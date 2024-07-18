@@ -9,6 +9,7 @@ class BankAccount:
     def withdraw(personal, amount): 
         personal.balance -= amount
 
+
     def deposit(personal, amount):
         personal.balance += amount
 
