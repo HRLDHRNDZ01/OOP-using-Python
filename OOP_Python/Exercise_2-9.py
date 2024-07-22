@@ -8,6 +8,13 @@ class Product():
     def selling_price(self):
         return self.marked_price - 0.01 * self.discount * self.marked_price
     
+    @property
+    def discount(self):
+        return self._discount+2 if self.marked_price > 500 else self.marked_price
+    
+    @discount.setter
+    def discount(self, new_discount):
+        self._discount = new_discount
     
     def display(self):
         print(self.id,  self.marked_price,  self.discount)
